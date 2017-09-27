@@ -36,6 +36,11 @@ function INPUT() {
 	read -r "$variable"
 }
 
+function TRON() {
+	echo "* $@"
+	"$@"
+}
+
 # Format of IF is "IF CONDITION-A OPERAND CONDITION-B THEN "COMMAND" END IF"
 # Format of IF-ELSE is "IF CONDITION-A OPERAND CONDITION-B THEN "COMMAND" ELSE "COMMAND" END IF"
 function IF() {
