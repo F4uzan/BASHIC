@@ -13,7 +13,7 @@ function REM() {
 }
 
 function END() {
-	printf ""
+	exit
 }
 
 function CLS() {
