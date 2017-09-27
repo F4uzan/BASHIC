@@ -9,7 +9,7 @@ function PRINT() {
 }
 
 function REM() {
-	return 1
+	return 0
 }
 
 function END() {
