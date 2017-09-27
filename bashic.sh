@@ -31,6 +31,15 @@ function WAIT() {
 	SLEEP "$time"
 }
 
+function RND() {
+	rand="$1"
+	if [ "$rand" = 0 ]; then
+		echo "$RANDOM"
+	else
+		echo "$((RANDOM % $rand))"
+	fi
+}
+
 function INPUT() {
 	if [ "$#" = 2 ]; then
 		add_text=true
