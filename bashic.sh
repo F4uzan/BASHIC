@@ -9,7 +9,7 @@ function PRINT() {
 }
 
 function REM() {
-	printf ""
+	return 1
 }
 
 function END() {
