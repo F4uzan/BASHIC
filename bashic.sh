@@ -31,6 +31,15 @@ function WAIT() {
 	SLEEP "$time"
 }
 
+function STOP() {
+	msg="$1"
+	if [ "$msg" = "" ]; then
+		read -rsn1 -p "STOP. Press any key to continue."; echo
+	else
+		read -rsn1 -p "$msg"; echo
+	fi
+}
+
 function RND() {
 	rand="$1"
 	if [ "$rand" = 0 ]; then
