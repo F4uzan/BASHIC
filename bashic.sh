@@ -40,7 +40,7 @@ function INPUT() {
 # Format of IF-ELSE is "IF CONDITION-A OPERAND CONDITION-B THEN "COMMAND" ELSE "COMMAND" END IF"
 function IF() {
 	condition_a="$1"
-	operand="$2"
+	operator="$2"
 	condition_b="$3"
 	then_if="$4"
 	cmd="$(echo $"$5" | sed "s/'/\'/g")"
@@ -54,7 +54,7 @@ function IF() {
 		if_end="$9"
 	fi
 	
-	case $operand in
+	case $operator in
 		GTR) with=">" ;;
 		LSS) with="<" ;;
 		EQU) with="=" ;;
