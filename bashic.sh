@@ -20,6 +20,11 @@ function CLS() {
 	clear
 }
 
+function SLEEP() {
+	time="$1"
+	sleep "$time"
+}
+
 function WAIT() {
 	time="$1"
 	sleep "$time"
