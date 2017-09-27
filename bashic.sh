@@ -27,7 +27,7 @@ function SLEEP() {
 
 function WAIT() {
 	time="$1"
-	sleep "$time"
+	SLEEP "$time"
 }
 
 function INPUT() {
