@@ -31,8 +31,18 @@ function WAIT() {
 }
 
 function INPUT() {
-	variable="$1"
-	printf "? "
+	if [ "$#" = 2 ]; then
+		add_text=true
+		text="$1"
+		variable="$2"
+	elif [ "$#" = 1 ]; then
+		variable="$1"
+	fi
+	if [ "$add_text" = "true" ]; then
+		printf "%s " "$text"
+	else
+		printf "? "
+	fi
 	read -r "$variable"
 }
 
