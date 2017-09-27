@@ -16,6 +16,10 @@ function END() {
 	printf ""
 }
 
+function CLS() {
+	clear
+}
+
 function INPUT() {
 	variable="$1"
 	printf "? "
