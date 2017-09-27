@@ -44,3 +44,12 @@ function LET() {
 	
 	export "$variable_name=$(($actual_number))"
 }
+
+# Format of SET is "SET VARIABLE = 'VALUE'"
+function SET() {
+	variable_name="$1"
+	just_equate="$2"
+	actual_value="$3"
+	
+	export "$variable_name=$actual_value"
+}
