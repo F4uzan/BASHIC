@@ -5,7 +5,7 @@
 # This is a Shell framework that runs .BAF
 
 function PRINT() {
-	echo "$1"
+	echo "$@"
 }
 
 function REM() {
