@@ -60,6 +60,7 @@ function IF() {
 		EQU) with="=" ;;
 		GRQ) with=">=" ;;
 		LSQ) with="<=" ;;
+		NOT) with="!=" ;;
 	esac
 	
 	if [ "$is_else" = "ELSE" ]; then
