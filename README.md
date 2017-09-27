@@ -1,6 +1,6 @@
 ### BASHIC, A Simple and Horribly-coded Instruction Code
 
-A "wrapper" for BASIC-like language. *DO NOT* use unless you really have a bad headache or you want to teach programming to the one _you hate the most_.
+A "wrapper" for BASIC-like language. **DO NOT** use unless you really have a bad headache or you want to teach programming to the one _you hate the most_.
 
 #### Okay, why does this exist?
 
