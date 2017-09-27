@@ -36,6 +36,45 @@ function INPUT() {
 	read -r "$variable"
 }
 
+# Format of IF is "IF CONDITION-A OPERAND CONDITION-B THEN "COMMAND" END IF"
+# Format of IF-ELSE is "IF CONDITION-A OPERAND CONDITION-B THEN "COMMAND" ELSE "COMMAND" END IF"
+function IF() {
+	condition_a="$1"
+	operand="$2"
+	condition_b="$3"
+	then_if="$4"
+	cmd="$(echo $"$5" | sed "s/'/\'/g")"
+	is_else="$6"
+	
+	if [ "$is_else" = "END" ]; then
+		if_end="$7"
+	elif [ "$is_else" = "ELSE" ]; then
+		else_cmd="$(echo $"$7" | sed "s/'/\'/g")"
+		is_end="$8"
+		if_end="$9"
+	fi
+	
+	case $operand in
+		GTR) with=">" ;;
+		LSS) with="<" ;;
+		EQU) with="=" ;;
+		GRQ) with=">=" ;;
+		LSQ) with="<=" ;;
+	esac
+	
+	if [ "$is_else" = "ELSE" ]; then
+		if [ "$condition_a" "$with" "$condition_b" ]; then
+			$cmd
+		else
+			$else_cmd
+		fi
+	elif [ "$is_else" = "END" ]; then
+		if [ "$condition_a" "$with" "$condition_b" ]; then
+			$cmd
+		fi
+	fi
+}
+
 # Format of LET is "LET VARIABLE = 'NUMBERS'"
 function LET() {
 	variable_name="$1"
