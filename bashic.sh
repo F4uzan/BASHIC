@@ -20,6 +20,11 @@ function CLS() {
 	clear
 }
 
+function WAIT() {
+	time="$1"
+	sleep "$time"
+}
+
 function INPUT() {
 	variable="$1"
 	printf "? "
