@@ -41,6 +41,20 @@ function TRON() {
 	"$@"
 }
 
+# Format of FOR is "FOR NUMBER-A TO NUMBER-B "COMMAND" NEXT"
+function FOR() {
+	var="$1"
+	to="$2"
+	condition="$3"
+	cmd="$(echo $"$4" | sed "s/'/\'/g")"
+	next="$5"
+	
+	while [ "$var" -le "$condition" ]; do
+		var=$(($var+1))
+		$cmd
+	done
+}
+
 # Format of IF is "IF CONDITION-A OPERAND CONDITION-B THEN "COMMAND" END IF"
 # Format of IF-ELSE is "IF CONDITION-A OPERAND CONDITION-B THEN "COMMAND" ELSE "COMMAND" END IF"
 function IF() {
