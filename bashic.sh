@@ -1,5 +1,5 @@
 #!/bin/bash
-# BASHIC, a small (horrible) instructed code
+# BASHIC, a Simple and Horribly-coded Instruction Code
 # Version 0.0.1-Git
 
 # This is a Shell framework that runs .BAF
