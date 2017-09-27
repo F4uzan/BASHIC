@@ -2,7 +2,8 @@
 # BASHIC, a Simple and Horribly-coded Instruction Code
 # Version 0.0.1-Git
 
-# This is a Shell framework that runs .BAF
+# BASHIC Framework, contains all functions used by BASHIC
+# Cannot be used to directly run BASC file, use parser for that
 
 function PRINT() {
 	echo "$@"
