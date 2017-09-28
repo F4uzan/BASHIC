@@ -49,6 +49,10 @@ function RND() {
 	fi
 }
 
+function RANDOMIZE() {
+	RANDOM="$1"
+}
+
 function INPUT() {
 	if [ "$#" = 2 ]; then
 		add_text=true
