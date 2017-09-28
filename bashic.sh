@@ -17,6 +17,10 @@ function PI() {
 	echo "3.14159265359"
 }
 
+function SQR() {
+	echo "sqrt($1)" | bc -l
+}
+
 function REM() {
 	return 0
 }
