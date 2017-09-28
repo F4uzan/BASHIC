@@ -50,7 +50,15 @@ function RND() {
 }
 
 function RANDOMIZE() {
-	RANDOM="$1"
+	type="$1"
+	case $type in
+		PR_ID) seed="(echo $$)" ;;
+		DATE) seed="$(date +%s)" ;;
+		NANO) seed="$(date +%N)" ;;
+		TIMER) seed="$(date +%H%M%S)" ;;
+		*) seed="$1" ;;
+	esac
+	RANDOM="$seed"
 }
 
 function INPUT() {
