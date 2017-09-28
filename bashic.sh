@@ -70,16 +70,20 @@ function TRON() {
 	"$@"
 }
 
-# Format of FOR is "FOR NUMBER-A TO NUMBER-B "COMMAND" NEXT"
+# Format of FOR is "FOR NUMBER-A TO NUMBER-B "COMMAND""
 function FOR() {
 	var="$1"
 	to="$2"
 	condition="$3"
-	cmd="$(echo $"$4" | sed "s/'/\'/g")"
-	next="$5"
-	
-	while [ "$var" -le "$condition" ]; do
-		var=$(($var+1))
+
+	a_var="$var"
+	a_cond="$condition"	
+	shift 3
+
+	cmd="$(echo $@ | sed "s/'/\'/g")"
+
+	while [ "$a_var" -le "$a_cond" ]; do
+		a_var=$(($a_var+1))
 		$cmd
 	done
 }
