@@ -1,6 +1,6 @@
 #!/bin/bash
 # BASHIC, a Simple and Horribly-coded Instruction Code
-# Version 0.0.1-Git
+# Version 0.0.2-Git
 
 # BASHIC Framework, contains all functions used by BASHIC
 # Cannot be used to directly run BASC file, use parser for that
