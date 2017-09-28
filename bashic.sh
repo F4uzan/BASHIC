@@ -21,6 +21,22 @@ function SQR() {
 	echo "sqrt($1)" | bc -l
 }
 
+function LOG() {
+	echo "l($1)" | bc -l
+}
+
+function SIN() {
+	echo "s($1)" | bc -l
+}
+
+function COS() {
+	echo "c($1)" | bc -l
+}
+
+function TAN() {
+	echo "s($1)/c($1)" | bc -l
+}
+
 function REM() {
 	return 0
 }
