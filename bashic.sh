@@ -63,6 +63,14 @@ function WAIT() {
 	SLEEP "$time"
 }
 
+function TIME() {
+	date +%H%M%S
+}
+
+function TI() {
+	TIME
+}
+
 function STOP() {
 	msg="$1"
 	if [ "$msg" = "" ]; then
