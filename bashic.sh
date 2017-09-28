@@ -37,6 +37,10 @@ function TAN() {
 	echo "s($1)/c($1)" | bc -l
 }
 
+function ATN() {
+	echo "a($1)" | bc -l
+}
+
 function REM() {
 	return 0
 }
