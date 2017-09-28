@@ -9,6 +9,10 @@ function PRINT() {
 	echo "$@"
 }
 
+function π() {
+	echo "3.14159265359"
+}
+
 function REM() {
 	return 0
 }
