@@ -182,7 +182,7 @@ function LET() {
 	just_equate="$2"
 	actual_number="$3"
 	
-	export "$variable_name=$(($actual_number))"
+	export "$variable_name=$(echo "scale=1; $actual_number" | bc -l)"
 }
 
 # Format of SET is "SET VARIABLE = 'VALUE'"
