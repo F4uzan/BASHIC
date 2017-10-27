@@ -6,11 +6,7 @@
 # Cannot be used to directly run BASC file, use parser for that
 
 function PRINT() {
-	echo "$@"
-}
-
-function π() {
-	echo "3.14159265359"
+	echo "$1"
 }
 
 function PI() {
